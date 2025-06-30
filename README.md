@@ -30,7 +30,7 @@ To develop a comprehensive credit card weekly dashboard that provides real-time 
     Exp_Type VARCHAR(50),
     Interest_Earned DECIMAL(10,3),
     Delinquent_Acc VARCHAR(5)
-    );
+    ) ;
    
    --For cust_detail
    CREATE TABLE cust_detail (
@@ -49,7 +49,7 @@ To develop a comprehensive credit card weekly dashboard that provides real-time 
     Customer_Job VARCHAR(50),
     Income INT,
     Cust_Satisfaction_Score INT
-    );
+    ) ;
 5. Copy csv data into SQL
    -- copy cc_detail table
 
@@ -65,11 +65,7 @@ To develop a comprehensive credit card weekly dashboard that provides real-time 
    FROM 'D:\customer.csv' 
    DELIMITER ',' 
    CSV HEADER;
-   # Note:
-   # Error: When I am copying data it is showing an error that datestyle format is not not valid for PostgreSQL.
-   # Solution: Update the Datestyle Setting: Set the datestyle explicitly for your session using the following command:
-               SET datestyle TO 'ISO, DMY';
-
+   
            
 6. As database is ready. Now open Power BI to import data from SQL database.
    * In home tab click on get data
@@ -108,6 +104,10 @@ To develop a comprehensive credit card weekly dashboard that provides real-time 
 
     
 
+# Note:
+   # Error: When I am copying data it is showing an error that datestyle format is not not valid for PostgreSQL.
+   # Solution: Update the Datestyle Setting: Set the datestyle explicitly for your session using the following command:
+               SET datestyle TO 'ISO, DMY';
 
 
 
